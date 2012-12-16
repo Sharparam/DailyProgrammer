@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Challenge #106 [Easy] (Random Talker, Part 1)
+ * http://www.reddit.com/r/dailyprogrammer/comments/11xje0/10232012_challenge_106_easy_random_talker_part_1/
+ */
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;

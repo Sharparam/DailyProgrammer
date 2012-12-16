@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Challenge #82 [easy] (Substring list)
+ * http://www.reddit.com/r/dailyprogrammer/comments/x8rl8/7272012_challenge_82_easy_substring_list/
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Challenge #82 [difficult] (Bowling scores)
+ * http://www.reddit.com/r/dailyprogrammer/comments/x8r90/7272012_challenge_82_difficult_bowling_scores/
+ */
+
+using System;
 using System.Linq;
 
 namespace Challenge82Difficult

@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Challenge #114 [Easy] Word ladder steps
+ * www.reddit.com/r/dailyprogrammer/comments/149kec/1242012_challenge_114_easy_word_ladder_steps/
+ */
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;

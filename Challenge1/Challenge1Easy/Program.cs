@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * [easy] challenge #1
+ * http://www.reddit.com/r/dailyprogrammer/comments/pih8x/easy_challenge_1/
+ */
+
+using System;
 using System.Globalization;
 using System.IO;
 
