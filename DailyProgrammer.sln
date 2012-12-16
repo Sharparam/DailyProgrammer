@@ -15,7 +15,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Challenge82", "Challenge82"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge82Difficult", "Challenge82\Challenge82Difficult\Challenge82Difficult.csproj", "{60C87BCB-B934-419A-8EF8-84597E11120F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge82Easy", "Challenge82Easy\Challenge82Easy.csproj", "{B9871379-C38D-432A-A881-230D0F468E22}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge82Easy", "Challenge82\Challenge82Easy\Challenge82Easy.csproj", "{B9871379-C38D-432A-A881-230D0F468E22}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Challenge1", "Challenge1", "{FAC6BE8B-0A78-4576-B597-21FC19361328}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge1Easy", "Challenge1\Challenge1Easy\Challenge1Easy.csproj", "{54ABDCA1-BF71-44A9-AA7B-DE1D62BDF0C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +47,10 @@ Global
 		{B9871379-C38D-432A-A881-230D0F468E22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9871379-C38D-432A-A881-230D0F468E22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9871379-C38D-432A-A881-230D0F468E22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54ABDCA1-BF71-44A9-AA7B-DE1D62BDF0C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54ABDCA1-BF71-44A9-AA7B-DE1D62BDF0C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54ABDCA1-BF71-44A9-AA7B-DE1D62BDF0C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54ABDCA1-BF71-44A9-AA7B-DE1D62BDF0C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,5 +60,6 @@ Global
 		{8E25FA9C-FE2C-460C-AA6D-76C35D5DE1EC} = {F8E2CF9E-A207-4244-BB2C-2D9D953C027D}
 		{60C87BCB-B934-419A-8EF8-84597E11120F} = {D0882D15-F33F-4D4C-9632-3BC1334D21B0}
 		{B9871379-C38D-432A-A881-230D0F468E22} = {D0882D15-F33F-4D4C-9632-3BC1334D21B0}
+		{54ABDCA1-BF71-44A9-AA7B-DE1D62BDF0C1} = {FAC6BE8B-0A78-4576-B597-21FC19361328}
 	EndGlobalSection
 EndGlobal
