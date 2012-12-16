@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Challenge1Easy
 {
@@ -15,7 +12,7 @@ namespace Challenge1Easy
 		private static int _age;
 		private static string _reddit;
 
-		static void Main(string[] args)
+		static void Main()
 		{
 			if (File.Exists(SaveFile))
 			{
@@ -47,7 +44,7 @@ namespace Challenge1Easy
 				});
 				_age = int.Parse(age);
 				_reddit = Utilities.Input.GetInput("What's your reddit username?", "Invalid username, please enter a valid username:", s => !string.IsNullOrEmpty(s));
-				File.WriteAllLines(SaveFile, new[] {_name, _age.ToString(), _reddit});
+				File.WriteAllLines(SaveFile, new[] {_name, _age.ToString(CultureInfo.InvariantCulture), _reddit});
 			}
 
 			Console.WriteLine("Your name is {0}, you are {1} years old, and your username is {2}.", _name, _age, _reddit);
