@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * [difficult] Challenge #1
+ * http://www.reddit.com/r/dailyprogrammer/comments/pii6j/difficult_challenge_1/
+ */
+
+using System;
 
 namespace Challenge1Difficult
 {
