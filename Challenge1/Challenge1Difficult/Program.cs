@@ -4,7 +4,6 @@
  */
 
 using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace Challenge1Difficult
@@ -13,9 +12,10 @@ namespace Challenge1Difficult
 	{
 		private static readonly Random Rand = new Random(DateTime.Now.Millisecond);
 		private static int _number;
-		private static readonly List<Try> Tries = new List<Try>();
 		private const uint NumTests = (uint)1E+8;
 		private const int UpperLimit = 100;
+
+		private static double _totalGuessCount;
 
 		public static void Main(string[] args)
 		{
@@ -30,23 +30,15 @@ namespace Challenge1Difficult
 					Run(false);
 					runs++;
 				}
-				catch (OutOfMemoryException ex)
+				catch (OutOfMemoryException)
 				{
-					Console.WriteLine("Ran out of memory after {0} runs! Returning results gathered so far...", runs + 1);
+					Console.WriteLine("Ran out of memory after {0} runs! Returning results gathered so far...", runs);
 					break;
 				}
-				
 			}
 			var end = DateTime.Now;
-			Console.WriteLine("Did {0} runs in {1} milliseconds! Result:", runs + 1, (end - start).TotalMilliseconds);
-			int totalGuesses = 0;
-			int totalTries = Tries.Count;
-			for (int i = 0; i < totalTries; i++)
-			{
-				//Console.WriteLine("{0,5}: Guessed number {1,3} in {2,3} tries.", i + 1, _tries[i].Number, _tries[i].Guesses);
-				totalGuesses += Tries[i].Guesses;
-			}
-			Console.WriteLine("Average number of guesses needed: {0,5}", (double) totalGuesses / totalTries);
+			Console.WriteLine("Did {0} runs in {1} milliseconds! Result:", runs, (end - start).TotalMilliseconds);
+			Console.WriteLine("Average number of guesses needed: {0,5}", _totalGuessCount / runs);
 			Console.ReadKey();
 		}
 
@@ -70,13 +62,13 @@ namespace Challenge1Difficult
 			
 			if (human)
 				Console.WriteLine("You have chosen the number {0}, I will now try to guess it. Please tell me \"too low\", \"too high\" or \"correct\".", _number);
-			bool correct = false;
-			int upper = UpperLimit + 1;
-			int lower = 1;
-			int guesses = 0;
+			var correct = false;
+			var upper = UpperLimit + 1;
+			var lower = 1;
+			var guesses = 0;
 			while (!correct)
 			{
-				int guess = Rand.Next(lower, upper);
+				var guess = Rand.Next(lower, upper);
 				guesses++;
 				char response;
 				if (human)
@@ -88,29 +80,35 @@ namespace Challenge1Difficult
 					                                    {
 						                                    if (string.IsNullOrEmpty(s))
 							                                    return false;
-						                                    char c = s.Split(' ').Last().ToLower()[0];
-						                                    if (c != 'l' && c != 'h' && c != 'c' && c != 'y')
-							                                    return false;
-						                                    return true;
+						                                    var c = s.Split(' ').Last().ToLower()[0];
+						                                    return c == 'l' || c == 'h' || c == 'c' || c == 'y';
 					                                    }).ToLower().Split(' ').Last()[0];
 				}
 				else
 					response = guess < _number ? 'l' : (guess > _number ? 'h' : 'c');
 
-				if (response == 'l')
-					lower = guess + 1;
-				else if (response == 'h')
-					upper = guess - 1;
-				else
-					correct = true;
+				switch (response)
+				{
+					case 'l':
+						lower = guess + 1;
+						break;
+					case 'h':
+						upper = guess - 1;
+						break;
+					default:
+						correct = true;
+						break;
+				}
 			}
-			if (human)
-			{
-				Console.WriteLine("The number you chose was {0} and I found it in {1} guesses!", _number, guesses);
-				Console.Write("Press a key to exit...");
-				Console.ReadKey();
-			}
-			Tries.Add(new Try {Number = _number, Guesses = guesses});
+
+			_totalGuessCount += guesses;
+
+			if (!human)
+				return;
+
+			Console.WriteLine("The number you chose was {0} and I found it in {1} guesses!", _number, guesses);
+			Console.Write("Press a key to exit...");
+			Console.ReadKey();
 		}
 	}
 }
