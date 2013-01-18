@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Challenge #112 [Easy] (Get that URL!)
+ * http://www.reddit.com/r/dailyprogrammer/comments/137f7t/11142012_challenge_112_easyget_that_url/
+ */
+
+using System;
 using System.Text.RegularExpressions;
 
 namespace Challenge112Easy
