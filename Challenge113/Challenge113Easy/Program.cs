@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Challenge #113 [Easy] (String-type checking)
+ * http://www.reddit.com/r/dailyprogrammer/comments/13hmz3/11202012_challenge_113_easy_stringtype_checking/
+ */
+
+using System;
 using System.Text.RegularExpressions;
 
 namespace Challenge113Easy
