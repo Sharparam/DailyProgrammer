@@ -1,5 +1,5 @@
 ﻿/*
- * Challenge 116 [Easy] (Permutation of a string)
+ * Challenge #116 [Easy] (Permutation of a string)
  * http://www.reddit.com/r/dailyprogrammer/comments/164zvs/010713_challenge_116_easy_permutation_of_a_string/
  */
 
