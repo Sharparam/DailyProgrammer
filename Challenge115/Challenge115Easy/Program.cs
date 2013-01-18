@@ -12,11 +12,11 @@ namespace Challenge115Easy
 		static void Main()
 		{
 			var number = new Random().Next(1, 101);
-			int guess = 0;
+			var guess = 0;
 			while (guess != number)
 			{
 				Console.WriteLine("Guess a number between 1 and 100!");
-				string input = Console.ReadLine();
+				var input = Console.ReadLine();
 				var success = int.TryParse(input, out guess);
 				if (!success || guess < 1 || guess > 100)
 					Console.WriteLine("Invalid number!");
